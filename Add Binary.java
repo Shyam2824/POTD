@@ -16,4 +16,5 @@ public class Add Binary {
     
         return sb.reverse().toString();
       }
+      
 }
