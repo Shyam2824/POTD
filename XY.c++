@@ -1,20 +1,47 @@
- static int shortestXYDist(ArrayList<ArrayList<Character>> grid, int N,
-                              int M) {
-        //code here
-         List<int[]> x = new ArrayList<>(); // store all X with their co-ordinates
-        List<int[]> y = new ArrayList<>(); // store all Y with their co-ordinates
-        int distance = Integer.MAX_VALUE;
-        for(int i = 0; i < N; i++) {
-            for(int j = 0; j < M; j++) {
-                if(grid.get(i).get(j) == 'X') x.add(new int[]{i, j});
-                else if(grid.get(i).get(j) == 'Y') y.add(new int[]{i, j});
+class Solution {
+  public:
+    int shortestXYDist(vector<vector<char>> grid, int N, int M) {
+        // code here
+         queue<pair<int,int>> q;
+        vector<vector<bool>> visited(N,vector<bool>(M,0));
+        for(int i=0;i<N;i++)
+        {
+            for(int j=0;j<M;j++)
+            {
+                if(grid[i][j]=='Y')
+                {
+                    q.push({i,j});
+                    visited[i][j]=true;
+                }
             }
         }
-        // for every x, calculate manhattan distance with all Y, and store minimum distance in answer variable
-        for(int[] xi : x) {
-            for(int[] yi : y) {
-                distance = Math.min(distance, Math.abs(xi[0]-yi[0]) + Math.abs(xi[1]-yi[1]));
+        // x,y -> (x-1)(y) , (x,y+1) , (x+1,y) , (x,y-1)
+        int dx[4]={-1,0,1,0};
+        int dy[4]={0,-1,0,1};
+        int steps=0;
+        while(!q.empty())
+        {
+            int qsize=q.size();
+            while(qsize--)
+            {
+                 auto it=q.front();
+                 q.pop();
+                 int x=it.first,y=it.second;
+                 
+                 if(grid[x][y]=='X') return steps;
+                 
+                 for(int k=0;k<4;k++)
+                 {
+                     int adji=x+dx[k],adjj=y+dy[k];
+                     if(adji>=0 && adjj>=0 && adji<N && adjj<M && !visited[adji][adjj])
+                     {
+                         q.push({adji,adjj});
+                         visited[adji][adjj]=true;
+                     }
+                 }
             }
+           steps++;
         }
-        return distance;
+        return -1;
     }
+};
