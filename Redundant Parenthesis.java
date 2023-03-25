@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.Stack;
+
 class Solution
 {
 public static String removeBrackets(String expression) {
