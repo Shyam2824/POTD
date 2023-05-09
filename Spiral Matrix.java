@@ -1,4 +1,5 @@
 public class Spiral Matrix {
+    public List<Integer> spiralOrder(int[][] matrix) {
     if (matrix.length == 0)
     return new ArrayList<>();
 
@@ -27,5 +28,5 @@ public class Spiral Matrix {
   }
 
   return ans;
-
+    }
 }
