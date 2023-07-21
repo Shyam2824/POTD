@@ -1,4 +1,8 @@
+import java.util.Arrays;
+
 public class nsilc {
+    public int findNumberOfLIS(int[] nums) {
+
     final int n = nums.length;
     int ans = 0;
     int maxLength = 0;
@@ -29,5 +33,6 @@ public class nsilc {
       }
 
     return ans;
+    }
 
 }
