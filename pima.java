@@ -1,4 +1,5 @@
 public class pima {
+    public static void pima (int[] arr){
     int l = 0;
     int r = arr.length - 1;
 
@@ -11,4 +12,5 @@ public class pima {
     }
 
     return l;
+}
 }
