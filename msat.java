@@ -1,4 +1,6 @@
 public class msat {
+    public int minSpeedOnTime(int[] dist, double hour) {
+
     int left = 1, right = (int) 1e7;
     while (left < right) {
         int mid = (left + right) >> 1;
@@ -18,5 +20,6 @@ private boolean check(int[] dist, int speed, double hour) {
         res += (i == dist.length - 1 ? cost : Math.ceil(cost));
     }
     return res <= hour;
+    }
 
 }
