@@ -1,6 +1,8 @@
 import java.util.Arrays;
 
 public class mrtc {
+    public long maxRunTime(int n, int[] batteries) {
+
         long sum = Arrays.stream(batteries).asLongStream().sum();
 
     Arrays.sort(batteries);
@@ -16,5 +18,5 @@ public class mrtc {
     // If the max battery <= average running time,
     // It won't be waste, and so do smaller batteries
     return sum / n;
-
+}
 }
