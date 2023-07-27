@@ -1,5 +1,8 @@
 public class Heap Sort {
 
+        void buildHeap(int arr[], int n)
+    {
+
        for(int i=n/2-1;i>=0;i--){
             heapify(arr,n,i);
         }
@@ -42,6 +45,6 @@ public class Heap Sort {
         //code here
         Solution s=new Solution();
         s.buildHeap(arr,n);
-
+    }
     
 }
