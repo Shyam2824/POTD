@@ -1,5 +1,14 @@
+import java.util.ArrayList;
+import java.util.List;
+
+import org.w3c.dom.Node;
+
 public class Median of BST {
-       private static void inorderTraversal(Node root, List<Integer> nodeList)
+       /**
+     * @param root
+     * @param nodeList
+     */
+    private static void inorderTraversal(Node root, List<Integer> nodeList)
     {
         if (root == null) return;
 
