@@ -1,5 +1,10 @@
-class Solution{
+import java.util.ArrayList;
 
+import org.w3c.dom.Node;
+
+class Solution{
+public Node inorderSuccessor(Node root,Node x)
+         {
 ArrayList<Node> ar = new ArrayList<>();
            inorder(root, ar);
            int count = 0;
@@ -13,5 +18,6 @@ ArrayList<Node> ar = new ArrayList<>();
              inorder(root.left, ar);
              ar.add(root);
              inorder(root.right, ar);
+         }
 
          }
