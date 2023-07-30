@@ -1,4 +1,5 @@
 public class Soup Servings {
+     public double soupServings(int n) {
    return n >= 4800 ? 1.0 : dfs((n + 24) / 25, (n + 24) / 25);
   }
 
@@ -15,4 +16,6 @@ public class Soup Servings {
       return memo[a][b];
     return memo[a][b] =
                0.25 * (dfs(a - 4, b) + dfs(a - 3, b - 1) + dfs(a - 2, b - 2) + dfs(a - 1, b - 3));  
+  }
+  
 }
