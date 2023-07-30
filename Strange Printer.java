@@ -1,4 +1,5 @@
 public class Strange Printer {
+    public int strangePrinter(String s) {
     final int n = s.length();
     // dp[i][j] := min # of turns to print s[i..j]
     dp = new int[n][n];
@@ -21,4 +22,5 @@ public class Strange Printer {
         dp[i][j] = Math.min(dp[i][j], strangePrinter(s, i, k - 1) + strangePrinter(s, k + 1, j));
 
     return dp[i][j];
+  }
 }
