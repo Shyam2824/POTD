@@ -1,4 +1,6 @@
- ArrayList<Node> ar = new ArrayList<>();
+class Solution{
+
+ArrayList<Node> ar = new ArrayList<>();
            inorder(root, ar);
            int count = 0;
            for(int i = 0 ; i < ar.size() ; i ++){
@@ -11,3 +13,5 @@
              inorder(root.left, ar);
              ar.add(root);
              inorder(root.right, ar);
+
+         }
