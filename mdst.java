@@ -1,4 +1,5 @@
 public class mdst {
+    public int minimumDeleteSum(String s1, String s2) {
     final int m = s1.length();
     final int n = s2.length();
     // dp[i][j] := min cost to make s1[0..i) and s2[0..j) equal
@@ -20,4 +21,5 @@ public class mdst {
           dp[i][j] = Math.min(dp[i - 1][j] + s1.charAt(i - 1), dp[i][j - 1] + s2.charAt(j - 1));
 
     return dp[m][n]; 
+    }
 }
