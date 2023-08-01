@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class DFS of Graph {
     class Solution {
     // Function to return a list containing the DFS traversal of the graph.
