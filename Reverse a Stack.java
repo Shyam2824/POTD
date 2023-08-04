@@ -1,3 +1,7 @@
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+
 class Solution
 { 
     static void reverse(Stack<Integer> s)
