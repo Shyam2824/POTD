@@ -1,3 +1,9 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import javax.swing.tree.TreeNode;
+
 class Solution {
   public List<TreeNode> generateTrees(int n) {
     if (n == 0)
@@ -5,7 +11,12 @@ class Solution {
     return generateTrees(1, n);
   }
 
-  private List<TreeNode> generateTrees(int min, int max) {
+  /**
+ * @param min
+ * @param max
+ * @return
+ */
+private List<TreeNode> generateTrees(int min, int max) {
     if (min > max)
       return Arrays.asList((TreeNode) null);
 
