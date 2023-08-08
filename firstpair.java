@@ -1,3 +1,8 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 class Solution {
     public static int countFractions(int n, int[] nu, int[] d) {
         int ans =0;
