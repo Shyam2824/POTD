@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 class Longest Increasing Subsequence
 static int longestSubsequence(int size, int a[])
 {
