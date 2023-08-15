@@ -1,7 +1,16 @@
+import java.util.List;
+
+import javax.swing.plaf.ListUI;
+
 public class Partition List {
    class Solution {
-  public ListNode partition(ListNode head, int x) {
-    ListNode beforeHead = new ListNode(0);
+  /**
+ * @param head
+ * @param x
+ * @return
+ */
+public ListUI partition(ListNode head, int x) {
+    List beforeHead = new ListNode(0);
     ListNode afterHead = new ListNode(0);
     ListNode before = beforeHead;
     ListNode after = afterHead;
