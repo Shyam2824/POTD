@@ -1,5 +1,16 @@
-public class Solution {
-  public String reorganizeString(String s) {
+import java.util.HashMap;
+import java.util.Map;
+import java.util.PriorityQueue;
+import java.util.Queue;
+
+import sortesh.Pair;
+
+public class regonization {
+  /**
+ * @param s
+ * @return
+ */
+public String reorganizeString(String s) {
     Map<Character, Integer> count = new HashMap<>();
     int maxFreq = 0;
 
