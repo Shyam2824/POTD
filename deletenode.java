@@ -1,3 +1,5 @@
+import org.w3c.dom.Node;
+
 class Solution
 {
     Node compute(Node head)
