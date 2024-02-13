@@ -12,5 +12,5 @@ public class majority01 {
       
           return ans;
         }
-      }
+    }
 }
